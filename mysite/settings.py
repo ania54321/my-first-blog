@@ -25,7 +25,7 @@ SECRET_KEY = 'g=y-+*b14kpbapas5lv$n@suqx6ji!&*)iw^ey#87p9)r%yu3k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["ania54321.pythonanywhere.com"]
+ALLOWED_HOSTS = ["ania54321.pythonanywhere.com", "127.0.0.1"]
 
 
 # Application definition
@@ -120,3 +120,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'public', 'static')
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
