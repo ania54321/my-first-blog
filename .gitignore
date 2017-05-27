@@ -6,3 +6,6 @@ db.sqlite3
 
 .vscode
 plik.py
+
+public/
+local_settings.py
